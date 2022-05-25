@@ -41,8 +41,8 @@ class Cliente{
     + validar(ticket_estacionamento, cpf, cartao_mercado)
 }
 
-Funcionario --> Caixa
-Cliente <-- Caixa
-Produto --> Caixa
+Funcionario --|> Caixa
+Cliente <|-- Caixa
+Produto --|> Caixa
 
 @enduml
