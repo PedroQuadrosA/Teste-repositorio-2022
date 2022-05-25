@@ -1,0 +1,48 @@
+@startuml Mercado
+
+title Diagrama de Mercado
+
+class Caixa{
+    - numero: int
+    - tipo_de_pagamento: string
+    - cpf_na_nota: string
+    - total: float
+    + constructor (numero, tipo_de_pagamento, cpf_na_nota,total)
+    + validar(cpf_na_nota)
+}
+
+class Produto{
+    - nome: String
+    - quantidade: int
+    - validade: String
+    - promocao: bool
+    - valor: float
+    - código: int
+    + constructor (nome, quantidade, validade, promocao, valor, codigo)
+    + validar(quantidade,promocao, código, validade)
+}
+
+class Funcionario{
+    - nome: String
+    - matricula: int
+    - funcao: String
+    - salario: Float
+    - turno: String
+    + constructor (nome, matricula, funcao, salario, turno)
+    + validar(matricula, função)
+}
+
+class Cliente{
+    - quantidade_itens: int
+    - cpf: string
+    - cartao_mercado: bool
+    - ticket_estacionamento: bool
+    + constructor (quantidade_itens, cpf, cartao_mercado, ticket_estacionadmento)
+    + validar(ticket_estacionamento, cpf, cartao_mercado)
+}
+
+Funcionario --> Caixa
+Cliente <-- Caixa
+Produto --> Caixa
+
+@enduml
